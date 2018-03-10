@@ -37,17 +37,17 @@ public class MainActivity extends AppCompatActivity {
         setOperationButtonListener();
     }
 
-    private void setOperationButtonListener(){
-        for (int id:operationButtonIDList) {
+    private void setOperationButtonListener() {
+        for (int id : operationButtonIDList) {
             findViewById(id).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     String op = ((Button) v).getText().toString();
                     String value = newNumber.getText().toString();
-                    try{
+                    try {
                         Double doubleValue = Double.valueOf(value);
-                        performOperation(doubleValue,op);
-                    }catch (NumberFormatException e){
+                        performOperation(doubleValue, op);
+                    } catch (NumberFormatException e) {
                         newNumber.setText("");
                     }
                     pendingOperation = op;
@@ -57,33 +57,33 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void setNumberButtonListener(){
-        for (int id:numberButtonIDList) {
+    private void setNumberButtonListener() {
+        for (int id : numberButtonIDList) {
             findViewById(id).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    newNumber.append(((Button)v).getText().toString());
+                    newNumber.append(((Button) v).getText().toString());
                 }
             });
         }
 
     }
 
-    private void performOperation(Double value,String op){
-        if(operand1 == null){
+    private void performOperation(Double value, String op) {
+        if (operand1 == null) {
             operand1 = value;
-        }else{
-            if(pendingOperation.equals("=")){
+        } else {
+            if (pendingOperation.equals("=")) {
                 pendingOperation = op;
             }
-            switch (pendingOperation){
+            switch (pendingOperation) {
                 case "=":
                     operand1 = value;
                     break;
                 case "/":
-                    if(value == 0){
+                    if (value == 0) {
                         operand1 = 0.0;
-                    }else{
+                    } else {
                         operand1 /= value;
                     }
                     break;
