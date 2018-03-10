@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="button0txt">0</string>
+    <string name="button1Txt">1</string>
+    <string name="button2Txt">2</string>
+    <string name="button3Txt">3</string>
+    <string name="button4Txt">4</string>
+    <string name="button5Txt">5</string>
+    <string name="button6Txt">6</string>
+    <string name="button7Txt">7</string>
+    <string name="button8Txt">8</string>
+    <string name="button9Txt">9</string>
+    <string name="buttonDivideTxt">/</string>
+    <string name="buttonMultiplyTxt">*</string>
+    <string name="buttonMinusTxt">-</string>
+    <string name="buttonDotTxt">.</string>
+    <string name="buttonEqualsTxt">=</string>
+    <string name="buttonPlusTxt">+</string>
+</resources>
